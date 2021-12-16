@@ -8,18 +8,18 @@ pipeline {
         stage('scm') {
             steps {
                
-               git 'https://github.com/ramesh-devo/spring-petclinic.git', branch: 'main'
+               git 'https://github.com/ramesh-devo/java11-examples.git'
         }
 
             } 
             stage('build') {
-                steps {
+                 steps {
                      withSonarQubeEnv(installationName: 'SONAR_9.2.2', envOnly: true, credentialsId: 'SONAR_TOKEN'){
                           sh "/usr/local/apache-maven-3.8.4/bin/mvn clean package sonar:sonar"
                      echo "${env.SONAR_HOST_URL}"
-                }
+                     }
                     
-            }
+    }
         
         }
     }
