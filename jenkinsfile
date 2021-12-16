@@ -9,7 +9,6 @@ pipeline {
             steps {
                
                git 'https://github.com/ramesh-devo/spring-petclinic.git', branch: 'main'
-               }
         }
 
             } 
@@ -25,3 +24,4 @@ pipeline {
         }
     }
     
+}
