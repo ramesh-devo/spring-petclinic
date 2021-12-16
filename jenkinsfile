@@ -8,7 +8,7 @@ pipeline {
         stage('scm') {
             steps {
                
-               git 'https://github.com/ramesh-devo/java11-examples.git'
+               git 'https://github.com/ramesh-devo/spring-petclinic.git'
         }
 
             } 
